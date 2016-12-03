@@ -1,4 +1,8 @@
 [{ 
     "keys": ["alt+t"] , 
     "command": "todo_toggle" 
+},
+{
+    "keys": ["shift+alt+a"] , 
+    "command": "todo_archive" 
 }]

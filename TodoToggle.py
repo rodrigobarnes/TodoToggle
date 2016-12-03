@@ -24,3 +24,5 @@ class TodoHandler:
         else:
             # Other -> List item
             return '- %s' % (line_contents.rstrip().lstrip())
+
+            
