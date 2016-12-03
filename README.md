@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a first attempt at a simple TODO list handling in sublime text. The idea is to use plain files (e.g. markdown to store the TODO list and use conventions to manage the list.
+This is a first attempt at a simple TODO list handling in [Sublime Text 3](https://www.sublimetext.com/). The idea is to use plain files (e.g. markdown to store the TODO list and use conventions to manage the list.
 
 Currently two functions are supported:
 
@@ -19,3 +19,11 @@ Plain line
 - [ ] TODO item line
 - [x] TODO item line that's marked as done
 ```
+
+## Roadmap
+
+- [ ] Tag filtering (e.g. @high)
+- [ ] Prioritisation (e.g. order by @high, @med, @low)
+- [ ] Grouping 
+- [ ] Scanning other files for actions 
+
