@@ -6,5 +6,16 @@ This is a first attempt at a simple TODO list handling in sublime text. The idea
 
 Currently two functions are supported:
 
-1. Toggle (mapped to 'ALT-T'): cycle the item through the lifecycle
-2. Archive (mapped to 'SHIFT-ALT-T'): move 'done' items to the bottom of the file and tag as done with a timestamp.
+1. ```Toggle``` (mapped to 'ALT-T'): cycle the item through the lifecycle
+2. ```Archive``` (mapped to 'SHIFT-ALT-T'): move 'done' items to the bottom of the file and tag as done with a timestamp.
+
+## The TODO lifecycle
+
+A TODO item is a list item. The ```Toggle``` function cycles selected lines through the following cycle:
+
+```
+Plain line
+- List item line
+- [ ] TODO item line
+- [x] TODO item line that's marked as done
+```
