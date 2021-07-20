@@ -3,13 +3,18 @@ import re
 class TodoHandler:
     def toggle(self, line_contents):
         match_todo_todo = re.match('^\s*-\s+\[\s+\]\s+(.*$)', line_contents)
+        match_todo_prog = re.match('^\s*-\s+\[\s*-\s*\]\s+(.*$)', line_contents)
         match_todo_done = re.match('^\s*-\s+\[\s*x\s*\]\s+(.*$)', line_contents)
         match_list_item = re.match('^\s*-\s+(.*$)', line_contents)
         match_empty     = re.match('^\s*$', line_contents)
 
         if match_todo_todo:
-            #  Todo -> Done
+            #  Todo -> In progress
             task = match_todo_todo.group(1).rstrip()
+            return '- [-] %s' % (task)
+        elif match_todo_prog:
+            #  In progress -> Done
+            task = match_todo_prog.group(1).rstrip()
             return '- [x] %s' % (task)
         elif match_todo_done:
             # Done -> Other

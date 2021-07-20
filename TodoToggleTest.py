@@ -12,9 +12,16 @@ class TestTodoToggle(unittest.TestCase):
         self.assertEqual(self.handler.toggle('   -     Item 1   '), '- [ ] Item 1')
 
     def test_todo_empty(self):
-        self.assertEqual(self.handler.toggle('- [ ] TODO 1'), '- [x] TODO 1')
-        self.assertEqual(self.handler.toggle('  - [ ] TODO 1'), '- [x] TODO 1')
-        self.assertEqual(self.handler.toggle('- [    ]    TODO 1'), '- [x] TODO 1')
+        self.assertEqual(self.handler.toggle('- [ ] TODO 1'), '- [-] TODO 1')
+        self.assertEqual(self.handler.toggle('  - [ ] TODO 1'), '- [-] TODO 1')
+        self.assertEqual(self.handler.toggle('- [    ]    TODO 1'), '- [-] TODO 1')
+
+
+    def test_todo_inprogress(self):
+        self.assertEqual(self.handler.toggle('- [-] TODO 1'), '- [x] TODO 1')
+        self.assertEqual(self.handler.toggle('  - [-] TODO 1'), '- [x] TODO 1')
+        self.assertEqual(self.handler.toggle('- [-]    TODO 1'), '- [x] TODO 1')
+
 
     def test_todo_full(self):
         self.assertEqual(self.handler.toggle('- [x] TODO 1'), 'TODO 1')
