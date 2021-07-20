@@ -17,6 +17,7 @@ A TODO item is a list item. The ```Toggle``` function cycles selected lines thro
 Plain line
 - List item line
 - [ ] TODO item line
+- [-] TODO item line 'in progress'
 - [x] TODO item line that's marked as done
 ```
 
