@@ -27,5 +27,3 @@ Plain line
 - [ ] Prioritisation (e.g. order by @high, @med, @low)
 - [ ] Grouping 
 - [ ] Scanning other files for actions 
-
-Test commit - ignore 2
